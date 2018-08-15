@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>configserver</artifactId>
+    <artifactId>discovery-server</artifactId>
     <version>18.08</version>
     <packaging>jar</packaging>
 
-    <name>configserver</name>
-    <description>Spring Cloud config server</description>
+    <name>discovery-server</name>
+    <description>Spring Cloud discovery server</description>
 
     <parent>
         <groupId>com.romantupikov</groupId>
@@ -25,11 +25,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-config-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 
