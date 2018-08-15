@@ -1,4 +1,4 @@
-#####Порядок запуска.
+##### Порядок запуска.
 1. `config-server`
 2. `discovery-server`
 3. `gateway-server`
@@ -12,14 +12,14 @@
 Указываем путь в `application.properties`.
 > `spring.cloud.config.server.git.uri=file://${user.home}/Documents/dev/geekbrains/spring2/spring-cloud-server-config-repo`
 
-#####Как выглядит репозиторий настроек.
+##### Как выглядит репозиторий настроек.
 
 * spring-cloud-server-config-repo
   * discovery-server.properties
   * gateway-server.properties
   * yet-another-site.properties
 
-#####Что внутри.
+##### Что внутри.
 *discovery-server.properties*
 ```properties
 spring.application.name=discovery-server
