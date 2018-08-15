@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html th:fragment="layout (title, content, scripts)"
-      xmlns:th="http://www.thymeleaf.org"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">>
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,23 +32,20 @@
             </ul>
             <!-- TODO: add security -->
             <ul class="navbar-nav">
-                <li sec:authorize="!isAuthenticated()"
-                    th:classappend="${activeController == 'login' ? 'active' : ''}"
+                <li th:classappend="${activeController == 'login' ? 'active' : ''}"
                     class="nav-item">
                     <a th:text="#{header.link.login}"
-                       th:href="@{/login}"
-                       href="#" class="nav-link disabled">Login</a>
+                       href="#"
+                       class="nav-link disabled">Login</a>
                 </li>
-                <li sec:authorize="!isAuthenticated()"
-                    th:classappend="${activeController == 'register' ? 'active' : ''}"
+                <li th:classappend="${activeController == 'register' ? 'active' : ''}"
                     class="nav-item">
                     <a th:text="#{header.link.register}"
-                       th:href="@{/register}"
-                       href="#" class="nav-link disabled">Register</a>
+                       href="#"
+                       class="nav-link disabled">Register</a>
                 </li>
             </ul>
-            <form sec:authorize="isAuthenticated()"
-                  th:action="@{/logout}"
+            <form th:action="@{/logout}"
                   method="post"
                   class="form-inline my-2 my-lg-0">
                 <button th:text="#{auth.logout.button}"
