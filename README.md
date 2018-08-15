@@ -8,6 +8,7 @@
 
 Для запуска `config-server` нужен репозиторий настроек.  
 В моем случае, он расположен в директории `~/Documents/dev/geekbrains/spring2/spring-cloud-server-config-repo`
+>:exclamation: Изменения должны быть закомитены
 
 Указываем путь в `application.properties`.
 > `spring.cloud.config.server.git.uri=file://${user.home}/Documents/dev/geekbrains/spring2/spring-cloud-server-config-repo`
